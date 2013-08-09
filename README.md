@@ -2,7 +2,7 @@ Soundex Encoder
 
 A simple library to encode strings using the Soundex algorithm.
 
-```
+```javascript
 var Soundex = require('soundex-encode')
 
 // Standard 3-digit
