@@ -9,7 +9,7 @@ var Soundex = require('soundex-encode')
 Soundex('Battlestar') // B342
 
 // MySQL (at least in 5.6...)
-Soundex('Battlestar') // B34236
+Soundex('Battlestar', true) // B34236
 ```
 -----
 
