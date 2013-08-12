@@ -1,16 +1,24 @@
 {
   "name": "soundex-encode",
-  "version": "0.0.1",
   "description": "Encode strings as soundex hashes",
+  "version": "0.1.1",
+  "author": {
+    "name": "Derrick Pelletier",
+    "email": "derrick@dpelletier.com",
+    "url": "http://dpelletier.com"
+  },
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/derrickpelletier/soundex-encode.git"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD",
-  "dependencies": {
-  },
+  "homepage": "http://github.com/derrickpelletier/soundex-encode.git",
+  "keywords": [
+    "soundex",
+    "phonetic",
+    "language",
+    "indexing"
+  ],
   "devDependencies": {
     "mocha": "*",
     "chai": "~1.6.0"
