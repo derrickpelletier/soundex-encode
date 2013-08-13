@@ -1,5 +1,7 @@
 Soundex Encoder
 
+`npm install soundex-encode`
+
 A simple library to encode strings using the Soundex algorithm.
 
 ```javascript
