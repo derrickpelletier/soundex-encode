@@ -28,20 +28,38 @@ describe('Encoding with default', function(){
 
 })
 
+describe('Encoding with default', function(){
+
+  it('encode single strings', function(){
+    var opts = {
+        zeroed: false
+    }
+    expect(soundex('Wu', opts)).to.equal('W')
+    expect(soundex('Jackson', opts)).to.equal('J25')
+    expect(soundex('Euler', opts)).to.equal('E46')
+    expect(soundex('Gauss', opts)).to.equal('G2')
+    expect(soundex('Knuth', opts)).to.equal('K53')
+    expect(soundex('Lloyd', opts)).to.equal('L3')
+  })
+
+})
+
 // These strings are compared to the ones I generated from SELECT SOUNDEX(str); in MySQL 5.6.12
 describe('Encoding with mysql', function(){
 
   it('encode single strings', function(){
-
-    expect(soundex('Washington', true)).to.equal('W25235')
-    expect(soundex('Wu', true)).to.equal('W000')
-    expect(soundex('DeSmet', true)).to.equal('D253')
-    expect(soundex('Gutierrez', true)).to.equal('G362')
-    expect(soundex('Pfister', true)).to.equal('P236')
-    expect(soundex('Jackson', true)).to.equal('J500')
-    expect(soundex('Tymczak', true)).to.equal('T520')
-    expect(soundex('Ashcraft', true)).to.equal('A2613')
-    expect(soundex('Battlestar', true)).to.equal('B34236')
+    var opts = {
+        mysql: true
+    }
+    expect(soundex('Washington', opts)).to.equal('W25235')
+    expect(soundex('Wu', opts)).to.equal('W000')
+    expect(soundex('DeSmet', opts)).to.equal('D253')
+    expect(soundex('Gutierrez', opts)).to.equal('G362')
+    expect(soundex('Pfister', opts)).to.equal('P236')
+    expect(soundex('Jackson', opts)).to.equal('J500')
+    expect(soundex('Tymczak', opts)).to.equal('T520')
+    expect(soundex('Ashcraft', opts)).to.equal('A2613')
+    expect(soundex('Battlestar', opts)).to.equal('B34236')
 
   })
 

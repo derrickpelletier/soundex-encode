@@ -9,7 +9,10 @@ var Soundex = require('soundex-encode')
 Soundex('Battlestar') // B342
 
 // MySQL (at least in 5.6...)
-Soundex('Battlestar', true) // B34236
+Soundex('Battlestar', {mysql:true}) // B34236
+
+// Un-zero-finished hashes
+Soundex('Jackson', {zeroed:false}) // J25
 ```
 -----
 
